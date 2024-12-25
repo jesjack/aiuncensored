@@ -4,6 +4,7 @@ Private. Liberated. Nuanced.
 <br>
 
 ## ⚙️ Usage:
+
 ```python
 if __name__ == "__main__":
     Client = AIUncensored()
@@ -12,7 +13,7 @@ if __name__ == "__main__":
         "content": "you are an expert python geek"
     }]
     question = "How to bypass captcha2"
-    print(Client.Chat(question, histories))
+    print(Client.chat(question, histories))
 ```
 
 <br>

@@ -2,19 +2,24 @@
 
 import requests
 from typing import List, Dict
-from googlesearch import get_random_user_agent
+from fake_useragent import UserAgent
+
 
 class AIUncensored:
     """
     Client = AIUncensored()
     Client.Chat(str, List[Dict[str, str]])
     """
+
     def __init__(self):
         self.version = 'v1.3'
 
+        ua = UserAgent()
+        random_user_agent = ua.random
+
         self.url = "https://darkai.foundation/chat"
         self.headers = {
-            "User-Agent": (get_random_user_agent()).decode('utf-8'),
+            "User-Agent": random_user_agent,
             "Accept": "text/event-stream",
             "Accept-Language": "en-US,en;q=0.5",
             "Accept-Encoding": "gzip, deflate, br, zstd",
@@ -37,7 +42,7 @@ class AIUncensored:
             self.error_text = error_text
             super().__init__(error_text)
 
-    def Chat(self, query: str, history: List[Dict[str, str]]) -> str:
+    def chat(self, query: str, history: List[Dict[str, str]]) -> str:
         json = {
             "query": query,
             "history": history,
