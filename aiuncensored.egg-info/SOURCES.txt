@@ -1,9 +1,0 @@
-LICENSE
-README.md
-setup.py
-aiuncensored/__init__.py
-aiuncensored.egg-info/PKG-INFO
-aiuncensored.egg-info/SOURCES.txt
-aiuncensored.egg-info/dependency_links.txt
-aiuncensored.egg-info/requires.txt
-aiuncensored.egg-info/top_level.txt
